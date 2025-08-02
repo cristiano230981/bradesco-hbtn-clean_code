@@ -33,7 +33,9 @@ public class Functions {
 
     // ✅ Sem efeitos colaterais
     public User saveUserWithRole(User user) {
-        setRole(user);
+        if (user.isAdmin()) {
+            setRole(user);
+        }
         return userRepository.save(user);
     }
 
