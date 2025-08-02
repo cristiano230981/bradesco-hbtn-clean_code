@@ -57,9 +57,20 @@ public class Functions {
     // Classes auxiliares (simuladas)
     public static class Income {}
     public static class Expense {}
-    public static class User {
-        public boolean isAdmin;
-        public void setRole(User user) {}
+    public class User {
+        private boolean isAdmin;
+
+        public boolean isAdmin() {
+            return isAdmin;
+        }
+
+        public void setAdmin(boolean isAdmin) {
+            this.isAdmin = isAdmin;
+        }
+
+        public void setRole(User user) {
+            // lógica para definir o papel do usuário
+        }
     }
 
     public interface IncomeRepository {
